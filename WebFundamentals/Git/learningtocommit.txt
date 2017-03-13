@@ -1,0 +1,190 @@
+Claires-MacBook-Pro-2:DojoAssignments clairekramer$ git
+xcode-select: note: no developer tools were found at '/Applications/Xcode.app', requesting install. Choose an option in the dialog to download the command line developer tools.
+Claires-MacBook-Pro-2:DojoAssignments clairekramer$ git
+xcode-select: note: no developer tools were found at '/Applications/Xcode.app', requesting install. Choose an option in the dialog to download the command line developer tools.
+Claires-MacBook-Pro-2:DojoAssignments clairekramer$ 
+  [Restored Mar 9, 2017, 9:59:50 AM]
+Last login: Tue Mar  7 20:45:12 on ttys000
+Restored session: Tue Mar  7 21:08:36 PST 2017
+Claires-MacBook-Pro-2:DojoAssignments clairekramer$ git
+
+
+Agreeing to the Xcode/iOS license requires admin privileges, please re-run as root via sudo.
+
+
+Claires-MacBook-Pro-2:DojoAssignments clairekramer$ git config --global user.name Claire
+
+
+Agreeing to the Xcode/iOS license requires admin privileges, please re-run as root via sudo.
+
+
+Claires-MacBook-Pro-2:DojoAssignments clairekramer$ git
+usage: git [--version] [--help] [-C <path>] [-c name=value]
+           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]
+           [-p | --paginate | --no-pager] [--no-replace-objects] [--bare]
+           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]
+           <command> [<args>]
+
+These are common Git commands used in various situations:
+
+start a working area (see also: git help tutorial)
+   clone      Clone a repository into a new directory
+   init       Create an empty Git repository or reinitialize an existing one
+
+work on the current change (see also: git help everyday)
+   add        Add file contents to the index
+   mv         Move or rename a file, a directory, or a symlink
+   reset      Reset current HEAD to the specified state
+   rm         Remove files from the working tree and from the index
+
+examine the history and state (see also: git help revisions)
+   bisect     Use binary search to find the commit that introduced a bug
+   grep       Print lines matching a pattern
+   log        Show commit logs
+   show       Show various types of objects
+   status     Show the working tree status
+
+grow, mark and tweak your common history
+   branch     List, create, or delete branches
+   checkout   Switch branches or restore working tree files
+   commit     Record changes to the repository
+   diff       Show changes between commits, commit and working tree, etc
+   merge      Join two or more development histories together
+   rebase     Reapply commits on top of another base tip
+   tag        Create, list, delete or verify a tag object signed with GPG
+
+collaborate (see also: git help workflows)
+   fetch      Download objects and refs from another repository
+   pull       Fetch from and integrate with another repository or a local branch
+   push       Update remote refs along with associated objects
+
+'git help -a' and 'git help -g' list available subcommands and some
+concept guides. See 'git help <command>' or 'git help <concept>'
+to read about a specific subcommand or concept.
+Claires-MacBook-Pro-2:DojoAssignments clairekramer$ git config --global user.name Claire
+Claires-MacBook-Pro-2:DojoAssignments clairekramer$ git config --global user.email kramerclaire@me.com
+Claires-MacBook-Pro-2:DojoAssignments clairekramer$ git config --global --list
+user.name=Claire
+user.email=kramerclaire@me.com
+Claires-MacBook-Pro-2:DojoAssignments clairekramer$ git config --global color.ui"auto"
+Claires-MacBook-Pro-2:DojoAssignments clairekramer$ pwd
+/Users/clairekramer/desktop/DojoAssignments
+Claires-MacBook-Pro-2:DojoAssignments clairekramer$ cd ..
+Claires-MacBook-Pro-2:desktop clairekramer$ mkdir gittest
+Claires-MacBook-Pro-2:desktop clairekramer$ cd gittest
+Claires-MacBook-Pro-2:gittest clairekramer$ git init
+Initialized empty Git repository in /Users/clairekramer/Desktop/gittest/.git/
+Claires-MacBook-Pro-2:gittest clairekramer$ touch index.html styles.css aboutMe.txt
+Claires-MacBook-Pro-2:gittest clairekramer$ ls
+aboutMe.txt	index.html	styles.css
+Claires-MacBook-Pro-2:gittest clairekramer$ git commit -m "Added 3 new files"
+On branch master
+
+Initial commit
+
+Untracked files:
+	aboutMe.txt
+	index.html
+	styles.css
+
+nothing added to commit but untracked files present
+Claires-MacBook-Pro-2:gittest clairekramer$ open /Applications/TextEdit.app aboutMe.txt
+Claires-MacBook-Pro-2:gittest clairekramer$ git commit -m "updated aboutMe"
+On branch master
+
+Initial commit
+
+Untracked files:
+	aboutMe.txt
+	index.html
+	styles.css
+
+nothing added to commit but untracked files present
+Claires-MacBook-Pro-2:gittest clairekramer$ open /Applications/TextEdit.app aboutMe.txt
+Claires-MacBook-Pro-2:gittest clairekramer$ git commit -m "Added my Favorite Movie"
+On branch master
+
+Initial commit
+
+Untracked files:
+	aboutMe.txt
+	index.html
+	styles.css
+
+nothing added to commit but untracked files present
+Claires-MacBook-Pro-2:gittest clairekramer$ git log
+fatal: your current branch 'master' does not have any commits yet
+Claires-MacBook-Pro-2:gittest clairekramer$ git status
+On branch master
+
+Initial commit
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	aboutMe.txt
+	index.html
+	styles.css
+
+nothing added to commit but untracked files present (use "git add" to track)
+Claires-MacBook-Pro-2:gittest clairekramer$ git add gittest
+fatal: pathspec 'gittest' did not match any files
+Claires-MacBook-Pro-2:gittest clairekramer$ cd ..
+Claires-MacBook-Pro-2:desktop clairekramer$ git add gittest
+fatal: Not a git repository (or any of the parent directories): .git
+Claires-MacBook-Pro-2:desktop clairekramer$ cd gittest
+Claires-MacBook-Pro-2:gittest clairekramer$ git add aboutMe.txt
+Claires-MacBook-Pro-2:gittest clairekramer$ git add index.html
+Claires-MacBook-Pro-2:gittest clairekramer$ git add styles.css
+Claires-MacBook-Pro-2:gittest clairekramer$ git log
+fatal: your current branch 'master' does not have any commits yet
+Claires-MacBook-Pro-2:gittest clairekramer$ git commit -m "trying to commit again"
+[master (root-commit) eedba25] trying to commit again
+ 3 files changed, 1 insertion(+)
+ create mode 100644 aboutMe.txt
+ create mode 100644 index.html
+ create mode 100644 styles.css
+Claires-MacBook-Pro-2:gittest clairekramer$ git log
+commit eedba250d87df5cbc8e6d0eb0b8e0b9774358db2
+Author: Claire <kramerclaire@me.com>
+Date:   Thu Mar 9 16:41:29 2017 -0800
+
+    trying to commit again
+Claires-MacBook-Pro-2:gittest clairekramer$ git commit -m "updated aboutMe.txt"
+On branch master
+Changes not staged for commit:
+	modified:   aboutMe.txt
+
+no changes added to commit
+Claires-MacBook-Pro-2:gittest clairekramer$ git add aboutMe.txt
+Claires-MacBook-Pro-2:gittest clairekramer$ git commit -m "updated aboutMe.txt"
+[master e07c4be] updated aboutMe.txt
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Claires-MacBook-Pro-2:gittest clairekramer$ git add aboutMe.txt
+Claires-MacBook-Pro-2:gittest clairekramer$ git commit -m "added my favorite movie"
+[master 20dd46f] added my favorite movie
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Claires-MacBook-Pro-2:gittest clairekramer$ git log
+commit 20dd46f37fa6820ddfc603886e6f1461d4bbc58f
+Author: Claire <kramerclaire@me.com>
+Date:   Thu Mar 9 16:43:29 2017 -0800
+
+    added my favorite movie
+
+commit e07c4be9429e985cc595502faee9fd5208c2e5ee
+Author: Claire <kramerclaire@me.com>
+Date:   Thu Mar 9 16:42:49 2017 -0800
+
+    updated aboutMe.txt
+
+commit eedba250d87df5cbc8e6d0eb0b8e0b9774358db2
+Author: Claire <kramerclaire@me.com>
+Date:   Thu Mar 9 16:41:29 2017 -0800
+
+    trying to commit again
+Claires-MacBook-Pro-2:gittest clairekramer$ git revert -n 20dd46f
+Claires-MacBook-Pro-2:gittest clairekramer$ git add aboutMe.txt
+Claires-MacBook-Pro-2:gittest clairekramer$ git commit -m "favorite book"
+[master 9c56285] favorite book
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Claires-MacBook-Pro-2:gittest clairekramer$ 

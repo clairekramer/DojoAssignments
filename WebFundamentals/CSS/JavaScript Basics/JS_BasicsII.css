@@ -1,0 +1,61 @@
+.container {
+  width: 970px;
+  background-color: navy;
+  padding: 10px;
+}
+
+.header {
+  width: 100%;
+  background-color: red;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.header h1 {
+  margin: 0;
+  padding: 15px 0 15px 10px;
+  color: lightgrey;
+}
+
+.navBar {
+  width: 20%;
+  background-color: #3d9ea0;
+  color: white;
+  border-radius: 10px;
+  padding: 10px;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.main-content {
+  width: 72%;
+  background-color: black;
+  color: lightgrey;
+  display: inline-block;
+  border-radius: 10px;
+  padding: 15px;
+  margin-left: 15px;
+}
+
+h2 {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+a {
+  color: #56dbdd;
+}
+
+span {
+  color: #6f53ed;
+}
+
+.footer {
+  background-color: grey;
+  color: lightgrey;
+  width: 100%;
+  border-radius: 10px;
+  margin-top: 15px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}

@@ -1,0 +1,162 @@
+
+  [Restored Mar 7, 2017, 7:41:15 PM]
+Last login: Tue Mar  7 18:32:40 on ttys000
+Restored session: Tue Mar  7 18:32:41 PST 2017
+Claires-MacBook-Pro-2:~ clairekramer$ pwd
+/Users/clairekramer
+Claires-MacBook-Pro-2:~ clairekramer$ cd ~/desktop
+Claires-MacBook-Pro-2:desktop clairekramer$ mkdir DojoAssignments
+Claires-MacBook-Pro-2:desktop clairekramer$ cd DojoAssignments
+Claires-MacBook-Pro-2:DojoAssignments clairekramer$ mkdir WebFundamentals PythonMEAN Ruby iOS netCore
+Claires-MacBook-Pro-2:DojoAssignments clairekramer$ ls
+PythonMEAN	Ruby		WebFundamentals	iOS		netCore
+Claires-MacBook-Pro-2:DojoAssignments clairekramer$ mv PythonMEAN Python
+Claires-MacBook-Pro-2:DojoAssignments clairekramer$ ls
+Python		Ruby		WebFundamentals	iOS		netCore
+Claires-MacBook-Pro-2:DojoAssignments clairekramer$ mkdir MEAN
+Claires-MacBook-Pro-2:DojoAssignments clairekramer$ ls
+MEAN		Ruby		iOS
+Python		WebFundamentals	netCore
+Claires-MacBook-Pro-2:DojoAssignments clairekramer$ cd MEAN
+Claires-MacBook-Pro-2:MEAN clairekramer$ mkdir about.txt
+Claires-MacBook-Pro-2:MEAN clairekramer$ ls
+about.txt
+Claires-MacBook-Pro-2:MEAN clairekramer$ cd ..
+Claires-MacBook-Pro-2:DojoAssignments clairekramer$ cd Ruby
+Claires-MacBook-Pro-2:Ruby clairekramer$ mkdir about.txt
+Claires-MacBook-Pro-2:Ruby clairekramer$ cd ..
+Claires-MacBook-Pro-2:DojoAssignments clairekramer$ cd iOS
+Claires-MacBook-Pro-2:iOS clairekramer$ mkdir about.txt
+Claires-MacBook-Pro-2:iOS clairekramer$ cd ..
+Claires-MacBook-Pro-2:DojoAssignments clairekramer$ cd Python
+Claires-MacBook-Pro-2:Python clairekramer$ mkdir about.txt
+Claires-MacBook-Pro-2:Python clairekramer$ cd ..
+Claires-MacBook-Pro-2:DojoAssignments clairekramer$ cd WebFundamentals
+Claires-MacBook-Pro-2:WebFundamentals clairekramer$ mkdir about.txt
+Claires-MacBook-Pro-2:WebFundamentals clairekramer$ cd ..
+Claires-MacBook-Pro-2:DojoAssignments clairekramer$ cd netCore
+Claires-MacBook-Pro-2:netCore clairekramer$ mkdir about.txt
+Claires-MacBook-Pro-2:netCore clairekramer$ cd ..
+Claires-MacBook-Pro-2:DojoAssignments clairekramer$ cd WebFundamentals
+Claires-MacBook-Pro-2:WebFundamentals clairekramer$ mkdir Git HTML CSS JavaScript
+Claires-MacBook-Pro-2:WebFundamentals clairekramer$ ls
+CSS		Git		HTML		JavaScript	about.txt
+Claires-MacBook-Pro-2:WebFundamentals clairekramer$ cd CSS
+Claires-MacBook-Pro-2:CSS clairekramer$ mkdir about.txt
+Claires-MacBook-Pro-2:CSS clairekramer$ cd ..
+Claires-MacBook-Pro-2:WebFundamentals clairekramer$ cd Git
+Claires-MacBook-Pro-2:Git clairekramer$ mkdir about.txt
+Claires-MacBook-Pro-2:Git clairekramer$ cd ..
+Claires-MacBook-Pro-2:WebFundamentals clairekramer$ cd HTML
+Claires-MacBook-Pro-2:HTML clairekramer$ mkdir about.txt
+Claires-MacBook-Pro-2:HTML clairekramer$ cd ..
+Claires-MacBook-Pro-2:WebFundamentals clairekramer$ cd JavaScript
+Claires-MacBook-Pro-2:JavaScript clairekramer$ mkdir about.txt
+Claires-MacBook-Pro-2:JavaScript clairekramer$ cd ..
+Claires-MacBook-Pro-2:WebFundamentals clairekramer$ cd HTML
+Claires-MacBook-Pro-2:HTML clairekramer$ touch indentation.html
+Claires-MacBook-Pro-2:HTML clairekramer$ cd ..
+Claires-MacBook-Pro-2:WebFundamentals clairekramer$ cd ..
+Claires-MacBook-Pro-2:DojoAssignments clairekramer$ ls
+MEAN		Ruby		iOS
+Python		WebFundamentals	netCore
+Claires-MacBook-Pro-2:DojoAssignments clairekramer$ cd MEAN
+Claires-MacBook-Pro-2:MEAN clairekramer$ ls
+about.txt
+Claires-MacBook-Pro-2:MEAN clairekramer$ rmdir about.txt
+Claires-MacBook-Pro-2:MEAN clairekramer$ ls
+Claires-MacBook-Pro-2:MEAN clairekramer$ touch about.txt
+Claires-MacBook-Pro-2:MEAN clairekramer$ cd ..
+Claires-MacBook-Pro-2:DojoAssignments clairekramer$ cd Ruby
+Claires-MacBook-Pro-2:Ruby clairekramer$ ls
+about.txt
+Claires-MacBook-Pro-2:Ruby clairekramer$ rmdir about.txt
+Claires-MacBook-Pro-2:Ruby clairekramer$ touch about.txt
+Claires-MacBook-Pro-2:Ruby clairekramer$ cd ..
+Claires-MacBook-Pro-2:DojoAssignments clairekramer$ cd iOS
+Claires-MacBook-Pro-2:iOS clairekramer$ 
+Claires-MacBook-Pro-2:iOS clairekramer$ ls
+about.txt
+Claires-MacBook-Pro-2:iOS clairekramer$ rmdir about.txt
+Claires-MacBook-Pro-2:iOS clairekramer$ touch about.txt
+Claires-MacBook-Pro-2:iOS clairekramer$ cd .. 
+Claires-MacBook-Pro-2:DojoAssignments clairekramer$ cd Python
+Claires-MacBook-Pro-2:Python clairekramer$ ls
+about.txt
+Claires-MacBook-Pro-2:Python clairekramer$ rmdir about.txt
+Claires-MacBook-Pro-2:Python clairekramer$ touch about.txt
+Claires-MacBook-Pro-2:Python clairekramer$ cd ..
+Claires-MacBook-Pro-2:DojoAssignments clairekramer$ cd WebFundamentals
+Claires-MacBook-Pro-2:WebFundamentals clairekramer$ ls
+CSS		Git		HTML		JavaScript	about.txt
+Claires-MacBook-Pro-2:WebFundamentals clairekramer$ rmdir about.txt
+Claires-MacBook-Pro-2:WebFundamentals clairekramer$ touch about.txt
+Claires-MacBook-Pro-2:WebFundamentals clairekramer$ cd ..
+Claires-MacBook-Pro-2:DojoAssignments clairekramer$ cd netCore
+Claires-MacBook-Pro-2:netCore clairekramer$ ls
+about.txt
+Claires-MacBook-Pro-2:netCore clairekramer$ rmdir about.txt
+Claires-MacBook-Pro-2:netCore clairekramer$ touch about.txt
+Claires-MacBook-Pro-2:netCore clairekramer$ cd ..
+Claires-MacBook-Pro-2:DojoAssignments clairekramer$ cd WebFundamentals
+Claires-MacBook-Pro-2:WebFundamentals clairekramer$ ls
+CSS		Git		HTML		JavaScript	about.txt
+Claires-MacBook-Pro-2:WebFundamentals clairekramer$ cd CSS
+Claires-MacBook-Pro-2:CSS clairekramer$ ls
+about.txt
+Claires-MacBook-Pro-2:CSS clairekramer$ rmdir about.txt
+Claires-MacBook-Pro-2:CSS clairekramer$ touch about.txt
+Claires-MacBook-Pro-2:CSS clairekramer$ cd ..
+Claires-MacBook-Pro-2:WebFundamentals clairekramer$ cd Git
+Claires-MacBook-Pro-2:Git clairekramer$ ls
+about.txt
+Claires-MacBook-Pro-2:Git clairekramer$ rmdir about.txt
+Claires-MacBook-Pro-2:Git clairekramer$ touch about.txt
+Claires-MacBook-Pro-2:Git clairekramer$ cd ..
+Claires-MacBook-Pro-2:WebFundamentals clairekramer$ cd JavaScript
+Claires-MacBook-Pro-2:JavaScript clairekramer$ ls
+about.txt
+Claires-MacBook-Pro-2:JavaScript clairekramer$ rmdir about.txt
+Claires-MacBook-Pro-2:JavaScript clairekramer$ touch about.txt
+Claires-MacBook-Pro-2:JavaScript clairekramer$ cd ..
+Claires-MacBook-Pro-2:WebFundamentals clairekramer$ cd HTML
+Claires-MacBook-Pro-2:HTML clairekramer$ ls
+about.txt		indentation.html
+Claires-MacBook-Pro-2:HTML clairekramer$ rmdir about.txt
+Claires-MacBook-Pro-2:HTML clairekramer$ touch about.txt
+Claires-MacBook-Pro-2:HTML clairekramer$ cd ..
+Claires-MacBook-Pro-2:WebFundamentals clairekramer$ cd ..
+Claires-MacBook-Pro-2:DojoAssignments clairekramer$ ls -R
+MEAN		Ruby		iOS
+Python		WebFundamentals	netCore
+
+./MEAN:
+about.txt
+
+./Python:
+about.txt
+
+./Ruby:
+about.txt
+
+./WebFundamentals:
+CSS		Git		HTML		JavaScript	about.txt
+
+./WebFundamentals/CSS:
+about.txt
+
+./WebFundamentals/Git:
+about.txt
+
+./WebFundamentals/HTML:
+about.txt		indentation.html
+
+./WebFundamentals/JavaScript:
+about.txt
+
+./iOS:
+about.txt
+
+./netCore:
+about.txt
+Claires-MacBook-Pro-2:DojoAssignments clairekramer$ 
