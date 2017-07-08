@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Hover</title>
+    <link rel='stylesheet' type="text/css" href="hover.css">
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $('img').hover(function(){
+              $(this).attr('src', 'data-alt-src');
+            }, function() {
+              $(this).attr('src', 'src');
+            });
+        })
+    </script>
+  </head>
+  <body>
+      <h1>Hover over images</h1>
+      <div id="elephant">
+        <img src="elephantfront.jpg" id="elephantfront">
+        <img src="elephantback.jpg" id="elephantback">
+      </div>
+      <img src="bearfront.jpg" data-alt-src="bearback.jpg">
+      <img src="cowfront.jpg" data-alt-src="cowback.jpg">
+      <img src="horsefront.jpg" data-alt-src="horseback.jpg">
+  </body>
+</html>

@@ -1,0 +1,36 @@
+*{
+  padding: 0;
+  margin: 0;
+}
+
+body{
+  text-align: center;
+  width: 970px;
+  margin: 15px;
+  padding: 10px;
+}
+
+h1{
+  margin-bottom: 10px;
+}
+
+hr{
+  background-color: black;
+  margin: 20px 0px 20px 0px;
+}
+
+h3{
+  display: inline-block;
+  text-align: left;
+  margin-bottom: 10px;
+}
+
+button{
+  padding: 5px;
+  background-color: white;
+  margin: 5px;
+}
+
+.blue{
+  color: blue;
+}

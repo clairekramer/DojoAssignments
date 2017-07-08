@@ -1,0 +1,11 @@
+*{
+  padding: 0px;
+  margin: 0px;
+  width: 970px;
+}
+
+img{
+  display: block;
+  margin-bottom: 5px;
+  width: 40%;
+}

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <meta charset="utf-8">
+      <link rel="stylesheet" type="text/css" href="jquery_functions.css">
+      <title>jQuery Functions</title>
+      <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+      <script type="text/javascript">
+          $(document).ready(function(){
+          $('#hidebtn').click(function(){
+            $('h3').hide();
+          });
+
+          $('#showbtn').click(function(){
+            $('h3').show();
+          });
+
+          $('#toggle').click(function(){
+            $('h3').toggle();
+          });
+
+          $('#slideup').click(function(){
+            $('#slide').slideUp('slow');
+          });
+
+          $('#slidedown').click(function(){
+            $('#slide').slideDown('slow');
+          });
+
+          $('#slidetoggle').click(function(){
+            $('#slide').slideToggle('slow');
+          });
+
+          $('#fadein').click(function(){
+            $('#fade').fadeIn('slow');
+          });
+
+          $('#fadeout').click(function(){
+            $('#fade').fadeOut('slow');
+          });
+
+          $('#addclass').click(function(){
+            $('h3').addClass('blue');
+          });
+
+          $('#before').click(function(){
+            $('#baa').before('<p>Test</p>');
+          });
+
+          $('#after').click(function(){
+            $('#baa').after('<p>Test</p>');
+          });
+
+          $('#append').click(function(){
+            $('#baa').append('<p>Test</p>');
+          });
+
+          $('#addHTML').click(function(){
+            $('#html').html('<h2>HTML</h2>');
+          });
+
+          $('#att').click(function(){
+            $('#attphoto').attr('width', '300px');
+          });
+
+          $('#val').click(function(){
+            $('input:text').val('Blue');
+          });
+        })
+
+      </script>
+  </head>
+  <body>
+
+      <header>
+          <h1>jQuery Functions</h1>
+      </header>
+      <h3>Hide + Show + Toggle</h3>
+      <button type="button" id="hidebtn">Hide</button>
+      <button type="button" id="showbtn">Show</button>
+      <button type="button" id="toggle">Toggle</button>
+
+      <hr>
+
+      <h3 id="slide">Slide</h3>
+      <button type="button" id="slideup">Slide Up</button>
+      <button type="button" id="slidedown">Slide Down</button>
+      <button type="button" id="slidetoggle">Toggle</button>
+
+      <hr>
+
+      <h3 id="fade">Fade</h3>
+      <button type="button" id="fadein">Fade In</button>
+      <button type="button" id="fadeout">Fade Out</button>
+
+      <hr>
+
+      <h3 id="add">Add Class</h3>
+      <button id="addclass">Add Class</button>
+
+      <hr>
+
+      <h3 id="baa">Before, After and Append</h3>
+      <button id="before">Before</button>
+      <button id="after">After</button>
+      <button id="append">Append</button>
+
+      <hr>
+
+      <h3 id="html">HTML</h3>
+      <button id="addHTML">Add HTML</button>
+
+      <hr>
+
+      <h3>Attribute</h3>
+      <img id="attphoto" src="square-xxl.png" width="200px">
+      <button id="att">Attribute</button>
+
+      <hr>
+
+      <h3 id="value">Value</h3>
+      <p>Color: <input type="text" name="color"></p>
+      <button id="val">Value</button>
+
+
+  </body>
+</html>

@@ -1,0 +1,33 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+#box{
+  color: green;
+}
+
+#results{
+  margin: 20px;
+  padding: 20px;
+  width: 280px;
+  border: 2px solid black;
+}
+
+h3{
+  text-decoration: underline;
+}
+
+p{
+  padding: 20px 0px 0px 0px;
+  margin-left: 20px;
+  font-weight: bold;
+}
+
+span{
+  font-weight: normal;
+}
+
+input[type=submit]{
+  margin: 20px 0px 0px 220px;
+}

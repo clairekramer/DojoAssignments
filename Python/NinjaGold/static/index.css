@@ -1,0 +1,38 @@
+* {
+  margin: 0px;
+  padding: 5px;
+}
+
+header {
+  height: 20px;
+  width: 100%;
+  display: inline;
+}
+
+main {
+  margin: 5px;
+  text-align: center;
+}
+
+.place {
+  display: inline-block;
+  text-align: center;
+  width: 175px;
+  height: auto;
+  border: 2px solid black;
+  padding: 10px;
+}
+
+#activities {
+  width: auto;
+  height: 150px;
+  border: 2px solid black;
+}
+
+.gain {
+  color: green;
+}
+
+.loss {
+  color: red;
+}

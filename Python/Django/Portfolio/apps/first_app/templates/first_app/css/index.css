@@ -1,0 +1,9 @@
+div {
+  display: inline;
+}
+
+p {
+  display: inline-block;
+  width: 30px;
+  text-align: center;
+}

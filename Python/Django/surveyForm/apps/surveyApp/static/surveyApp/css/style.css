@@ -1,0 +1,15 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+#form{
+  margin: 20px;
+  padding: 20px;
+  width: 280px;
+  boder: 2px solid black;
+}
+
+input[type=submit]{
+  margin-left: 225px;
+}
