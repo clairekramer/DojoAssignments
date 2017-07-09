@@ -1,9 +1,8 @@
-def check():
-    checker = " * * * * "
-    for val in range(8):
-        if val % 2 == 0:
-            print checker
+def checkerboard():
+    for each in range(0, 7):
+        if each % 2 == 0:
+            print "* * * *"
         else:
-            print " " + checker
+            print " * * * *"
 
-check()
+checkerboard()
