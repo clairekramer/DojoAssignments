@@ -1,12 +1,12 @@
 #Part 1
-def draw_stars(x):
-    for each in x:
+def draw_stars(list):
+    for each in list:
         str = ""
-        for star in range(each):
-            str+='*'
+        for each in range(0, each):
+            str += "*"
         print str
 
-x = [4,6,1,3,5,7,25]
+x = [4, 6, 1, 3, 5, 7, 25]
 draw_stars(x)
 
 #Part 2
