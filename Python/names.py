@@ -1,18 +1,18 @@
-#Part 1
+#Part One
 students = [
-    {'first_name':  'Michael', 'last_name' : 'Jordan'},
-    {'first_name' : 'John', 'last_name' : 'Rosales'},
-    {'first_name' : 'Mark', 'last_name' : 'Guillen'},
-    {'first_name' : 'KB', 'last_name' : 'Tonel'}
+     {'first_name':  'Michael', 'last_name' : 'Jordan'},
+     {'first_name' : 'John', 'last_name' : 'Rosales'},
+     {'first_name' : 'Mark', 'last_name' : 'Guillen'},
+     {'first_name' : 'KB', 'last_name' : 'Tonel'}
 ]
 
-def partOne(givenDict):
-    for item in givenDict:
-        print item['first_name'], item['last_name']
+def name(list):
+    for each in list:
+        print each["first_name"], each["last_name"]
 
-partOne(students)
+name(students)
 
-#Part 2
+#Part Two
 users = {
  'Students': [
      {'first_name':  'Michael', 'last_name' : 'Jordan'},
@@ -26,13 +26,12 @@ users = {
   ]
  }
 
-def partTwo(givenList):
-     num = 0
-     for item in givenList:
-         print item
-         for person in givenList[item]:
-             num = num + 1
-             print num, '-', person['first_name'].upper(), person['last_name'].upper(), '-', len(person['first_name']+person['last_name'])
+def name2(dict):
+     for key, data in dict.items():
+         print key
+         idx = 1
+         for value in data:
+             print idx, '-', value['first_name'], value['last_name'], '-', len(value['first_name']+value['last_name'])
+             idx = idx + 1
 
-
-partTwo(users)
+name2(users)
