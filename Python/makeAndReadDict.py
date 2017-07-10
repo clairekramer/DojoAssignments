@@ -1,6 +1,13 @@
-def printDict():
-    dict = {'name':'Claire','age':'24','country of birth':'USA','language':'Python'}
-    for key, val in dict.iteritems():
-        print 'My {} is {}'.format(key,val)
+myDict = {
+    "name": "Claire",
+    "age": "24",
+    "country of birth": "The United States",
+    "favorite language": "Python"
+}
 
-printDict()
+def readDict(dict):
+    for key, value in dict.iteritems():
+            print "My {} is {}".format(key, value)
+
+
+readDict(myDict)
