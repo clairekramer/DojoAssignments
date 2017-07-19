@@ -12,6 +12,11 @@ def product():
     session['product_info'] = request.form
     return redirect('/success')
 
+@app.route('/product/<product>')
+def show_product(product):
+    print product
+    return render_template('product.html')
+
 @app.route('/success')
 def success():
     return render_template('success.html')
