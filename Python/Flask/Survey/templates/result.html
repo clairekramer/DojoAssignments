@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Survey Results</title>
+  </head>
+  <body>
+    <h1>Submitted Info:</h1>
+    <p>Name: {{ session['survey_results']['name'] }}</p>
+    <p>Dojo Location: {{ session['survey_results']['location'] }}</p>
+    <p>Favorite Language: {{ session['survey_results']['language'] }}</p>
+    <p>Comment: {{ session['survey_results']['comment'] }}</p>
+  </body>
+</html>
