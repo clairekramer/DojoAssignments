@@ -1,7 +1,7 @@
-from flask import Flask, render_template, redirect, request, session
+from flask import Flask, render_template, request, redirect, session
 import random, time
 app = Flask(__name__)
-app.secret_key='ninjagold'
+app.secret_key = 'ninja'
 
 @app.route('/')
 def index():
@@ -16,8 +16,8 @@ def index():
     return render_template('index.html')
 
 @app.route('/process_money', methods=['POST'])
-def gold():
-    session['amount'] = True #True = ++
+def process():
+    session['amount'] = True
     if request.form['building'] == 'farm':
         earnings = random.randrange(10,21)
         print earnings
@@ -49,11 +49,11 @@ def gold():
             session['amount'] = True
             session['log'].append(['Earned {} gold from {}! ({})'.format(earnings, request.form['building'], date), True])
         elif chance == 0:
-            lost = random.randrange(0,51)
-            print lost
-            session['score'] -= lost
+            loss = random.randrange(0,51)
+            print loss
+            session['score'] -= loss
             session['amount'] = False
-            session['log'].append(['Lost {} gold from {}! ({})'.format(lost, request.form['building'], date), False])
+            session['log'].append(['Lost {} gold from {}! ({})'.format(loss, request.form['building'], date), False])
     for each in session['log']:
         print each
         print each[0]
