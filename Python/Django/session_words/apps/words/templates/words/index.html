@@ -18,22 +18,12 @@
       <input type='submit' name='submit' value='Add to Session'>
     </form>
     {% for each in request.session.log %}
-      {% if request.session.font_size == False %}
-        {% if each.1 == 'blue' %}
-          <p><div class='blue'>{{ each.0 }}</div> - added on {{ request.session.date }}</p>
-        {% elif each.1 == 'green' %}
-          <p><div class='green'>{{ each.0 }}</div> - added on {{ request.session.date }}</p>
-        {% else %}
-          <p><div class='red'>{{ each.0 }}</div> - added on {{ request.session.date }}</p>
-        {% endif %}
-      {% elif request.session.font_size == 'big' %}
-        {% if each.1 == 'blue' %}
-          <p><span class='blue' class='big'>{{ each.0 }}</span> - added on {{ request.session.date }}</p>
-        {% elif each.1 == 'green' %}
-          <p><span class='green' class='big'>{{ each.0 }}</span> - added on {{ request.session.date }}</p>
-        {% else %}
-          <p><span class='red' class='big'>{{ each.0 }}</span> - added on {{ request.session.date }}</p>
-        {% endif %}
+      {% if each.1 == 'blue' %}
+        <p><span style='color:blue' class='{{ request.session.font_size }}'>{{ each.0 }}</span> - added on {{ request.session.date }}</p>
+      {% elif each.1 == 'green' %}
+        <p><span style='color:green' class='{{ request.session.font_size }}'>{{ each.0 }}</span> - added on {{ request.session.date }}</p>
+      {% else %}
+        <p><span style='color:red' class='{{ request.session.font_size }}'>{{ each.0 }}</span> - added on {{ request.session.date }}</p>
       {% endif %}
     {% endfor %}
     <form action='{% url 'clear' %}' method='POST'>

@@ -10,10 +10,13 @@ def add(request):
     request.session['date'] = datetime.now().strftime('%H:%M %p, %B %d, %Y')
     request.session['new_word'] = request.POST['new_word']
     request.session['color'] = request.POST['color']
-    if 'size' in request.POST:
-        request.session['font_size'] = True
-    else:
-        request.session['font_size'] = False
+    for key, value in request.POST.iteritems():
+        if key != 'csrfmiddlewaretoken' and key != 'size':
+            request.session['font_size'] = value
+        if key == 'size':
+            request.session['font_size'] = 'big'
+        else:
+            request.session['font_size'] = ''
     request.session['log'].append([request.session['new_word'], request.session['color']])
     return redirect('/')
 
