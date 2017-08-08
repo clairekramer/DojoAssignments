@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Session Words</title>
+      {% load static %}
+    <link rel="stylesheet" href="{% static 'words/css/main.css' %}" media="screen" title="no title"  charset="utf-8">
+  </head>
+  <body>
+    <h1>Add a new word</h1>
+    <form action='{% url 'generate' %}' method='POST'>
+      {% csrf_token %}
+      <input type='text' name='new_word'><br>
+      <input type='radio' name='color' value='blue' checked>Blue<br>
+      <input type='radio' name='color' value='green'>Green<br>
+      <input type='radio' name='color' value='red'>Red<br>
+      <input type='checkbox' name='size'>show in BIG fonts!<br>
+      <input type='submit' name='submit' value='Add to Session'>
+    </form>
+    {% for each in request.session.log %}
+      {% if request.session.font_size == False %}
+        {% if each.1 == 'blue' %}
+          <p><div class='blue'>{{ each.0 }}</div> - added on {{ request.session.date }}</p>
+        {% elif each.1 == 'green' %}
+          <p><div class='green'>{{ each.0 }}</div> - added on {{ request.session.date }}</p>
+        {% else %}
+          <p><div class='red'>{{ each.0 }}</div> - added on {{ request.session.date }}</p>
+        {% endif %}
+      {% elif request.session.font_size == 'big' %}
+        {% if each.1 == 'blue' %}
+          <p><span class='blue' class='big'>{{ each.0 }}</span> - added on {{ request.session.date }}</p>
+        {% elif each.1 == 'green' %}
+          <p><span class='green' class='big'>{{ each.0 }}</span> - added on {{ request.session.date }}</p>
+        {% else %}
+          <p><span class='red' class='big'>{{ each.0 }}</span> - added on {{ request.session.date }}</p>
+        {% endif %}
+      {% endif %}
+    {% endfor %}
+    <form action='{% url 'clear' %}' method='POST'>
+      {% csrf_token %}
+      <input type='submit' name='clear' value='Clear Session'>
+    </form>
+  </body>
+</html>
