@@ -14,21 +14,21 @@ def process(request):
     if request.POST['building'] == 'farm':
         earnings = random.randrange(10,21)
         print earnings
-        date = datetime.now().strftime('%Y/%m%d %I:%M %p')
+        date = datetime.now().strftime('%Y/%m/%d %I:%M %p')
         request.session['score'] += earnings
         request.session['amount'] = True
         request.session['log'].append(['Earned {} gold from {}! ({})'.format(earnings, request.POST['building'], date), True])
     elif request.POST['building'] == 'cave':
         earnings = random.randrange(5,11)
         print earnings
-        date = datetime.now().strftime('%Y/%m%d %I:%M %p')
+        date = datetime.now().strftime('%Y/%m/%d %I:%M %p')
         request.session['score'] += earnings
         request.session['amount'] = True
         request.session['log'].append(['Earned {} gold from {}! ({})'.format(earnings, request.POST['building'], date), True])
     elif request.POST['building'] == 'house':
         earnings = random.randrange(2,6)
         print earnings
-        date = datetime.now().strftime('%Y/%m%d %I:%M %p')
+        date = datetime.now().strftime('%Y/%m/%d %I:%M %p')
         request.session['score'] += earnings
         request.session['amount'] = True
         request.session['log'].append(['Earned {} gold from {}! ({})'.format(earnings, request.POST['building'], date), True])

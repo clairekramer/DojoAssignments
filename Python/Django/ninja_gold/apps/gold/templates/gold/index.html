@@ -8,7 +8,7 @@
   </head>
   <body>
     <header>
-     <p>Your Gold: {{ session.score }}</p>
+     <p>Your Gold: {{ request.session.score }}</p>
    </header>
    <main>
      <div class='box'>
@@ -50,7 +50,7 @@
    </main>
    <p>Activites:</p>
      <div id='Activities'>
-       {% for each in session.log %}
+       {% for each in request.session.log %}
          {% if each.1 == True %}
            <p class='gain'>{{ each.0 }}</p>
          {% else %}
