@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Dojo Sign Up</title>
+    <meta charset="utf-8">
+  </head>
+  <body>
+    <h1>Welcome to Coding Dojo</h1>
+    <a href='/programinfo'>Online Program Information</a>
+    <ul>
+      {% for user in all_users %}
+      <li>{{ user.name }}</li>
+      {% endfor %}
+    </ul>
+  </body>
+</html>

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Online Program Infomation</title>
+    <meta charset="utf-8">
+  </head>
+  <body>
+    <h1>Sign Up!</h1>
+    <form action='/process' method='POST'>
+      {% csrf_token %}
+    <p>Name: <input type='text' name='name'></p>
+    <p>Email: <input type='text' name='email'></p>
+    <p>Are You a Robot? <input type='checkbox' name='robot'></p>
+    <input type='submit' value='Sign Up!'>
+    </form>
+  </body>
+</html>
