@@ -10,9 +10,9 @@ class UserManager(models.Manager):
         for field, value in postData.iteritems():
             if len(value) < 1:
                 errors[field] = 'All Fields are Required'
-        if not 'email' in errors and not re.match(EMAIL_REGEX, postData['email']):
+        if 'email' not in errors and not re.match(EMAIL_REGEX, postData['email']):
             errors['email'] = 'Invalid Email'
-        elif User.objects.filter(email=postData.get['email']):
+        if User.objects.filter(email=postData['email']):
             errors['email'] = 'Email already in use'
         return errors
 

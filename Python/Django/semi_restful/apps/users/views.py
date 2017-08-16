@@ -17,13 +17,13 @@ def create(request):
     if len(errors):
         for tag, message in errors.iteritems():
             error(request, message, extra_tags=tag)
-    else:
-        User.objects.create(
-            first_name=request.POST['first_name'],
-            last_name=request.POST['last_name'],
-            email=request.POST['email']
-        )
-        return redirect('/')
+            return render(request, 'users/new_user.html')
+    User.objects.create(
+        first_name=request.POST['first_name'],
+        last_name=request.POST['last_name'],
+        email=request.POST['email']
+    )
+    return redirect('/')
 
 def show(request, id):
     context = {

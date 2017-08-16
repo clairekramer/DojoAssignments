@@ -6,6 +6,12 @@
   </head>
   <body>
     <h1>Edit User {{ user.id }}</h1>
+    {% if messages %}
+      {% for message in messages %}
+        <p class='{{ message.tags }}'>{{ message }}</p>
+      {% endfor %}
+    {% endif %}
+
     <form action='/users/{{ user.id }}/update' method='post'>
       {% csrf_token %}
       <p>First Name: <input type='text' name='first_name' value='{{ user.first_name }}'></p>
