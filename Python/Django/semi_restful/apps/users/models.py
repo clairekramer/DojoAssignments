@@ -10,10 +10,14 @@ class UserManager(models.Manager):
         for field, value in postData.iteritems():
             if len(value) < 1:
                 errors[field] = 'All Fields are Required'
+            if field == 'first_name' or field == 'last_name':
+                if not field in errors and len(value) < 2:
+                    errors[field] = '{} field must be at least 2 characters'.format(field.replace('_', ''))
         if 'email' not in errors and not re.match(EMAIL_REGEX, postData['email']):
             errors['email'] = 'Invalid Email'
-        if User.objects.filter(email=postData['email']):
-            errors['email'] = 'Email already in use'
+        else:
+            if len(self.filter(email=postData['email'])) > 1:
+                errors['email'] = 'Email already in use'
         return errors
 
 class User(models.Model):

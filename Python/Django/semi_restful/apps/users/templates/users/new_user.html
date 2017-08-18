@@ -6,7 +6,13 @@
   </head>
   <body>
     <h1>Add a new user</h1>
-    <form action='{% url 'new' %}' method='post'>
+    {% if messages %}
+      {% for message in messages %}
+        <p class='{{ message.tags }}'>{{ message }}</p>
+      {% endfor %}
+    {% endif %}
+
+    <form action='{% url 'create' %}' method='post'>
       {% csrf_token %}
       <p>First Name: <input type='text' name='first_name'></p>
       <p>Last Name: <input type='text' name='last_name'></p>

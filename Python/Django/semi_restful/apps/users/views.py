@@ -14,10 +14,10 @@ def new(request):
 
 def create(request):
     errors = User.objects.validate(request.POST)
-    if len(errors):
+    if len(errors) > 0:
         for tag, message in errors.iteritems():
             error(request, message, extra_tags=tag)
-            return render(request, 'users/new_user.html')
+        return render(request, 'users/new_user.html')
     User.objects.create(
         first_name=request.POST['first_name'],
         last_name=request.POST['last_name'],
