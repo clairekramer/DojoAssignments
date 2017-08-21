@@ -6,5 +6,5 @@ urlpatterns = [
     url(r'^courses$', views.index, name='home'),
     url(r'^courses/add$', views.add, name='add'),
     url(r'^courses/(?P<id>\d+)/remove$', views.remove, name='remove'),
-    url(r'^courses/(?P<id>\d+)/delete$', views.delete, name='delete')
+    url(r'^courses/(?P<id>\d+)/delete$', views.delete, name='delete'),
 ]
