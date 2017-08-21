@@ -23,7 +23,17 @@ class UserManager(models.Manager):
             errors['password'] = 'Password must be at least 8 Characters'
         if 'password' not in errors and postData['password'] != postData['confirm']:
             errors['password'] = 'Passwords do not match'
-        return errors
+        if len(errors) > 0:
+            return errors
+
+        hashed = bcrypt.hashpw(postData['password'].encode(), bcrypt.gensalt())
+        new_user = self.create(
+            first_name=postData['first_name'],
+            last_name=postData['last_name'],
+            email=postData['email'],
+            password=hashed
+        )
+        return new_user
 
     def validate_login(self, postData):
         errors = {}
