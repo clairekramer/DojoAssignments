@@ -11,10 +11,10 @@
     <h3>Name: {{ user.name }}</h3>
     <h3>Email: {{ user.email }}</h3>
     <h3>Total Reviews: {{ user.reviews.all.count }}</h3>
-    <br><br>
+    <br>
     <h3>Posted Reviews on the following books:</h3>
-    {% for each in  %}
-      <a href='books/book.id'>{{ book.title }}</a>
+    {% for book in user_reviews %}
+      <a href='books/book.id'>{{ book.title }}</a><br>
     {% endfor %}
   </body>
 </html>

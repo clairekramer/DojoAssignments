@@ -7,20 +7,20 @@
   <body>
     <header>
       <h1>Welcome, {{ user.name }}</h1>
-      <a href='{% url 'add' %}'>Add Book and Review</a> | <a href='{% url 'logout' %}'>Logout</a>
+      <a href='{% url 'add_book' %}'>Add Book and Review</a> | <a href='{% url 'logout' %}'>Logout</a>
     </header>
     <h3>Recent Book Reviews</h3>
-    {% for each in recent %}
-    <h4><a href='books/{{ review.book.id }}'>{{ review.book.title }}</a></h4>
-    <p>Rating: </p>
-    <p><a href='users/{{ review.reviewer.id }}'>{{ review.reviewer.name }}</a> says: {{ review.comment }}</p>
+    {% for review in recent %}
+    <h4><a href='/books/{{ review.book.id }}'>{{ review.book.title }}</a></h4>
+    <p>Rating: {{ review.rating }} stars</p>
+    <p><a href='/users/{{ review.reviewer.id }}'>{{ review.reviewer.name }}</a> says: {{ review.comment }}</p>
     <p>Posted on {{ review.created_at }}</p>
-
-    <h3>Other Books with Reviews</h3>
-    {% for book in books %}
-    <ul>
-      <li><a href='books/{{ review.book.id }}'>{{ review.book.title }}</a></li>
-    </ul>
     {% endfor %}
+    <h3>Other Books with Reviews</h3>
+    <ul>
+      {% for review in more %}
+      <li><a href='/books/{{ review.book.id }}'>{{ review.book.title }}</a></li>
+      {% endfor %}
+    </ul>
   </body>
 </html>

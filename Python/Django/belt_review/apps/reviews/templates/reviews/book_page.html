@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Book Page</title>
+    <meta charset="utf-8">
+  </head>
+  <body>
+    <header>
+      <a href='/books'>Home</a> | <a href='/logout'>Logout</a>
+    </header>
+    <h1>{{ book.title }}</h1>
+    <h3>{{ book.author.name }}</h3>
+    <br>
+    <h2>Reviews</h2>
+    {% for review in book.reviews.all %}
+      <p>Rating: {{ review.rating }} stars</p>
+      <p><a href='/user/{{ review.reviewer.id }}'>{{ review.reviewer.name }}</a> says: {{ review.comment }}</p>
+      <p>Posted on {{ review.created_at }}</p>
+    {% endfor %}
+    <form action='/books/{{ book.id }}/create' method='POST'>
+      {% csrf_token %}
+      <label for='comment'>Review:</label>
+      <textarea row='5' cols='40' type='text' name='comment'></textarea>
+      <label for='rating'>Rating:</label>
+      <select name='rating'>
+        <option value='1'>1</option>
+        <option value='2'>2</option>
+        <option value='3'>3</option>
+        <option value='4'>4</option>
+        <option value='5'>5</option>
+      </select>
+      <input type='submit' value='Submit Review'>
+    </form>
+  </body>
+</html>

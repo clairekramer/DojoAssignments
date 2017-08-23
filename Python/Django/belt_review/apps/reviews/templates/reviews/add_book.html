@@ -11,14 +11,14 @@
       {% csrf_token %}
       <p>Book Title: <input type='text' name='title'></p>
       <p>Author: <br>
-        {% for author in authors %}
         Choose from the list: <select name='author'>
+          {% for author in authors %}
           <option value='{{ author.id }}'>{{ author.name }}</option>
+          {% endfor %}
         </select><br>
-        {% endfor %}
-        Or add a new author: <input type='text' name='author'></p>
+        Or add a new author: <input type='text' name='new_author'></p>
       <p>Review: <input type='textfield' name='comment'></p>
-      <p>Rating: <select name='stars'>
+      <p>Rating: <select name='rating'>
                     <option value='1'>1</option>
                     <option value='2'>2</option>
                     <option value='3'>3</option>

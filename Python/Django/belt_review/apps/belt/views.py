@@ -13,9 +13,7 @@ def register(request):
             error(request, error)
         return redirect('/')
     else:
-        context = {
-            'user': result
-        }
+        request.session['user_id'] = result.id
         return redirect('/books')
 
 def login(request):
@@ -25,9 +23,7 @@ def login(request):
             error(request, error)
         return redirect('/')
     else:
-        context = {
-            'user': User.objects.get(id=result.id)
-        }
+        request.session['user_id'] = result.id
         return redirect('/books')
 
 
